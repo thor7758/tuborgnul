@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUBORG NUL</title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    body {
+        background-color: #fff;
+        margin: 0;
+
+    }
+
+
+
+    .dropbtn {
+
+        color: white;
+        padding: 16px;
+        font-size: 3rem;
+        font-family: 'Abril Fatface', cursive;
+        border: none;
+        width: 100%;
+        background-color: #1E3B83;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .dropdown {
+        text-align: center;
+        overflow: hidden;
+        float: inherit;
+        font-family: 'Abril Fatface', cursive;
+        background-color: white;
+        z-index: 2;
+        margin: 0;
+
+
+    }
+
+    .dropdown-content {
+        position: absolute;
+        background-color: #1E3B83;
+        display: none;
+
+        z-index: 2;
+        width: 100%;
+        justify-content: center;
+        left: 0;
+
+
+    }
+
+    .dropdown-content a {
+        padding: 20px;
+        color: white;
+        font-size: 2rem;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-family: 'Abril Fatface', cursive;
+        transition: 0.3s ease;
+        z-index: 2;
+
+
+    }
+
+    .dropdown-content a:hover {
+        opacity: 0.6;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        flex-direction: row;
+        display: flex;
+
+    }
+
+
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-background-color: #1E3B83; 50%);
+    }
+
+    .tuborgbutton {
+        position: relative;
+        display: block;
+        z-index: -10;
+        margin: 0 auto;
+        padding: 0;
+        height: 10vh;
+        width: 42vw;
+        color: #1E3B83;
+        background: #fff;
+        overflow: hidden;
+        border-bottom: 2px solid #1E3B83;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        z-index: 1;
+    }
+
+    .tuborgbutton a {
+        z-index: 2;
+        color: #1E3B83;
+        font-size: 6rem;
+        line-height: 100px;
+        padding: 0;
+        margin: 0;
+        transition: .4s ease color;
+        word-break: break-all;
+        font-family: 'Abril Fatface', cursive;
+        text-decoration-line: none;
+
+    }
+
+    .tuborgbutton::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        display: block;
+        height: 2px;
+        padding: 0;
+        width: 8vw;
+        margin-left: -30vw;
+        background: #1E3B83;
+        transition: 1s ease margin .5s, .5s ease height;
+    }
+
+    .tuborgbutton:hover a,
+    .tuborgbutton a:hover {
+        color: #fff;
+        transition: .2s ease color .5s;
+    }
+
+    .tuborgbutton:hover::before {
+        height: 10vh;
+        width: 42vw;
+        margin-left: 0px;
+        transition: .5s ease margin, .3s ease height .5s;
+    }
+
+    .container p {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .tuborgbutton a {
+            font-size: 2rem;
+        }
+
+        .tuborgbutton {
+            width: 80vw;
+        }
+
+        .tuborgbutton:hover a,
+        .tuborgbutton a:hover {
+            color: #fff;
+            transition: .2s ease color .5s;
+        }
+
+        tuborgbutton:hover::before {
+            height: 10vh;
+            width: 80vw;
+            margin-left: 0px;
+            transition: .5s ease margin, .3s ease height .5s;
+        }
+    }
+
+</style>
+
+<body>
+
+    <div class="dropdown">
+        <button class="dropbtn">TUBORG NUL
+            <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                <a href="tuborg_nul.html#kampange">KAMPAGNE</a>
+                <a href="tuborg_nul.html#smag">SMAG</a>
+                <a href="tuborg_nul.html#interaktion">#STADIGØL</a>
+            </div>
+        </button>
+    </div>
+
+    <section id="tuborgmain">
+
+        <div class="container">
+
+            <button class=tuborgbutton>
+                <a link href="tuborg_nul.html">TUBORG NUL›</a>
+            </button>
+            <p>- En helt ny øl fra Tuborg.</p>
+
+        </div>
+    </section>
+    <script src=""></script>
+</body>
+
+</html>

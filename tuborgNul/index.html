@@ -4,35 +4,51 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUBORG NUL</title>
+    <title>Kampagne</title>
     <link rel="stylesheet" href="">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+
 </head>
+
 <style>
-    * {
-        font-family: 'Work Sans', sans-serif;
+    html {
+        scroll-behavior: smooth;
     }
 
     body {
-        background-color: #fff;
         margin: 0;
+        background-color: #1E3B83;
 
     }
 
+    /**DROP DOWN MENU**/
 
+    nav {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    ul {
+        font-size: 1.5rem;
+        list-style-type: none;
+    }
 
     .dropbtn {
 
-        color: white;
+        color: #1E3B83;
         padding: 16px;
         font-size: 3rem;
         font-family: 'Abril Fatface', cursive;
         border: none;
         width: 100%;
-        background-color: #1E3B83;
-        z-index: 2;
-        margin: 0;
+        background-color: white;
     }
 
     .dropdown {
@@ -41,35 +57,30 @@
         float: inherit;
         font-family: 'Abril Fatface', cursive;
         background-color: white;
-        z-index: 2;
-        margin: 0;
 
 
     }
 
     .dropdown-content {
         position: absolute;
-        background-color: #1E3B83;
+        background-color: white;
         display: none;
-
-        z-index: 2;
+        z-index: 1;
         width: 100%;
         justify-content: center;
         left: 0;
-
 
     }
 
     .dropdown-content a {
         padding: 20px;
-        color: white;
+        color: #1E3B83;
         font-size: 2rem;
         text-decoration: none;
         display: block;
         text-align: center;
         font-family: 'Abril Fatface', cursive;
         transition: 0.3s ease;
-        z-index: 2;
 
 
     }
@@ -85,127 +96,791 @@
 
     }
 
+    .dropdown:hover .dropbtn {}
 
-
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 30%;
-        transform: translateY(-background-color: #1E3B83; 50%);
+    .hide {
+        display: none;
     }
 
-    .tuborgbutton {
-        position: relative;
-        display: block;
-        z-index: -10;
-        margin: 0 auto;
-        padding: 0;
-        height: 10vh;
-        width: 42vw;
-        color: #1E3B83;
-        background: #fff;
-        overflow: hidden;
-        border-bottom: 2px solid #1E3B83;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        z-index: 1;
+    /** ALL AROUND STYLING**/
+
+    .sectionwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
-    .tuborgbutton a {
-        z-index: 2;
-        color: #1E3B83;
-        font-size: 6rem;
-        line-height: 100px;
-        padding: 0;
+    .section {
+        max-width: 1400px;
         margin: 0;
-        transition: .4s ease color;
-        word-break: break-all;
+    }
+
+    .col {
+        padding: 10px;
+
+
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: left;
         font-family: 'Abril Fatface', cursive;
+        font-weight: 100;
+        margin: 0;
+        padding: 5px;
+    }
+
+    p {
+        text-align: left;
+        font-family: sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 100;
+        font-size: 0.8rem;
+        color: white;
+    }
+
+    footer {
+        width: 100%;
+        height: 8vh;
+        background-color: white;
+        text-align: center;
+
+    }
+
+    footer p {
+        color: #1E3B83;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Abril Fatface', cursive;
+        padding: 10px;
+    }
+
+    /** SPLASH STYLING**/
+
+
+
+    #splash .top,
+    h2 {
+        color: white;
+    }
+
+
+    #splash img {
+        position: relative;
+        width: 50%;
+        animation-name: leftentry4;
+        animation-duration: 1.5s;
+        transition: transform .2s;
+    }
+
+    #splash p {
+        background-color: #1E3B83;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        font-size: 1.2rem;
+
+
+    }
+
+    #splash h2 {
+        background-color: #1E3B83;
+        text-align: flex-start;
+        display: flex;
+        padding: 10px;
+        padding-bottom: 0px;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    #splash .col:nth-child(2) {
+        background-color: #1E3B83;
+        padding: 0;
+    }
+
+
+
+    @keyframes leftentry4 {
+        0% {
+            left: -80vw;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+    sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .bottom p {
+        color: white;
+    }
+
+    /** SOCIAL MEDIA STYLING**/
+
+    #social_media {
+        background-color: #1E3B83;
+
+    }
+
+    #social_media p {
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-top: 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+        background-color: #1E3B83;
+        font-family: sans-serif;
+        text-align: center;
+        text-decoration-line: none;
+        padding: 30px;
+        color: white;
+        width: 80%;
+
+
+
+    }
+
+    #social_media a {
+
+        width: 150px;
+        position: relative;
+        width: 20%;
+        padding: 10px;
+        left: 2.5%;
+
+    }
+
+    #social_media p:hover {
+        background-color: #1E3B83;
+        color: white;
+    }
+
+    #social_media img {
+        width: 10%;
         text-decoration-line: none;
 
     }
 
-    .tuborgbutton::before {
-        content: "";
-        z-index: -1;
-        position: absolute;
+    social_media img:hover {
+        color: white;
+    }
+
+    #social_media .sectionwrapper {
         display: block;
-        height: 2px;
-        padding: 0;
-        width: 8vw;
-        margin-left: -30vw;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    #social_media p:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: white;
+    }
+
+    #social_media a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .fa-facebook {
         background: #1E3B83;
-        transition: 1s ease margin .5s, .5s ease height;
+        color: black;
     }
 
-    .tuborgbutton:hover a,
-    .tuborgbutton a:hover {
-        color: #fff;
-        transition: .2s ease color .5s;
+    /** KAMPANGE STLING**/
+
+
+    #kampange {
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        padding: 50px;
+        margin: 30px;
     }
 
-    .tuborgbutton:hover::before {
-        height: 10vh;
-        width: 42vw;
-        margin-left: 0px;
-        transition: .5s ease margin, .3s ease height .5s;
+    #kampange h1 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
     }
 
-    .container p {
-        text-align: center;
+    #kampange h2 {
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        color: white;
+        padding: 10px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-size: 1.4rem;
+
+    }
+
+    #kampange p {
+        text-align: left;
+        padding-top: 0px;
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+
+    #kampange video {
+        width: 55vw;
+        height: auto;
+        object-fit: contain;
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        left: 70px;
+        top: 100px;
+    }
+
+    #kampange h1 {
+        z-index: 2;
+    }
+
+    .udregner label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+    }
+
+    .udregner input {
+        height: 2.5vh;
+        width: 20%;
+    }
+
+    .udregner #submitknap {
+        width: 40%;
+        height: 4vh;
+        background-color: transparent;
+        font-size: 1.4rem;
+        border: 2px solid black;
+        outline: none;
+        margin-top: 20px;
+        color: black;
+    }
+
+    .udregner #submitknap:hover {
+        text-decoration-line: underline;
+    }
+
+    #resultattekst {
+        margin-top: 20px;
+
+    }
+
+
+
+
+    /** SMAG STYLING**/
+
+    #smag .sectionwrapper {
+        padding: 0;
+        margin: 30px;
+        margin-top: 0px;
+    }
+
+    #smag .col:nth-child(1) {
+        background-color: #C0DFD7;
+        margin-bottom: 30px;
+        margin-left: 80px;
+    }
+
+    #smag .col:nth-child(1) p {}
+
+    #smag .col:nth-child(2) {}
+
+
+    #interaktion .col {
+        left: 10vw;
+        width: 100%;
+    }
+
+
+    @keyframes boxjump {
+        0% {
+            right: -450px;
+        }
+
+        80% {
+            right: 10px;
+        }
+
+        100% {
+            right: 0px;
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+
+        /** ALL AROUND STYLING**/
+
+        .sectionwrapper {
+            flex-wrap: nowrap;
+        }
+
+        .col {
+            width: 42%;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-family: 'Catamaran', sans-serif;
+            font-size: 1rem;
+            padding: 10px;
+        }
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        /** SPLASH STYLING **/
+        #splash h1 {
+            font-size: 7rem;
+            padding-top: 20px;
+            position: absolute;
+            left: 38vw;
+            top: 62vh;
+            color: white;
+        }
+
+
+
+        .cirkel {
+            position: absolute;
+            top: 150px;
+            right: 0px;
+            width: 130px;
+            height: 250px;
+            background-color: white;
+            border-bottom-left-radius: 120px;
+            border-top-left-radius: 120px;
+            animation-name: spin;
+            animation-duration: 2s;
+            transition: transform .2s;
+        }
+
+
+
+
+
+        /** KAMPANGE STYLING **/
+
+        #kampange {
+            background-color: #9dcece;
+        }
+
+        #kampange .sectionwrapper {
+            column-gap: 50px;
+            flex-direction: row;
+            display: flex;
+        }
+
+        #kampange .col {
+            margin: 10px;
+            text-align: center;
+            padding: 200px;
+        }
+
+        #kampange .col:nth-child(2) {
+            margin: 50px;
+            padding: 10px;
+
+        }
+
+
+        /** SOCIAL MEDIA STYLING **/
+
+        #social_media .sectionwrapper {
+            flex-wrap: nowrap;
+            position: relative;
+            padding-top: 40px;
+            padding-bottom: 50px;
+            flex-direction: row;
+            display: flex;
+
+        }
+
+        #social_media a {
+            width: 200px;
+            position: relative;
+            width: 40%;
+            padding: 10px;
+            left: 10%;
+
+        }
+
+        #social_media a:nth-child(2) {
+            position: relative;
+            z-index: 0;
+        }
+
+
+        /** SMAG STYLING **/
+
+        #smag {
+            position: relative;
+        }
+
+        #smag .col {
+            width: 40%;
+            padding: 20px;
+            margin: 40px;
+            height: auto;
+            margin-top: 0;
+        }
+
+        #smag .col:nth-child(2) h1 {
+            position: absolute;
+            margin-right: 0;
+
+
+        }
+
+        #smag .col:nth-child(1) {
+            margin-top: 50px;
+        }
+
+        #smag .col:nth-child(2) {
+            margin-right: 30px;
+            width: 40%;
+            padding-top: 80px;
+        }
+
+        #smag p {
+            font-size: 1.2rem;
+            padding-top: 0;
+            margin-top: 0;
+
+        }
+
+        #smag .col:nth-child(1) p {
+            color: black;
+        }
+
+
+
+        #splash h2 {
+            padding-top: 650px;
+            color: white;
+        }
+
     }
 
     @media only screen and (max-width: 900px) {
-        .tuborgbutton a {
-            font-size: 2rem;
+
+        body {
+            overflow-x: hidden;
         }
 
-        .tuborgbutton {
-            width: 80vw;
+        .dropdown:hover .dropdown-content {
+            display: block;
+            flex-direction: column;
+            display: flex;
+
         }
 
-        .tuborgbutton:hover a,
-        .tuborgbutton a:hover {
-            color: #fff;
-            transition: .2s ease color .5s;
+        #splash .col {
+            width: 100%;
         }
 
-        tuborgbutton:hover::before {
-            height: 10vh;
-            width: 80vw;
+        #splash h1 {
+            font-size: 4.5rem;
+        }
+
+        #splash p {
+            padding: 10px;
+
+
+        }
+
+        #kampange {
+            margin-bottom: -20px;
+            margin-top: 40px;
+        }
+
+        #kampange video {
+            width: 120%;
+            height: auto;
+            left: -10%;
+            top: 5%;
+
+        }
+
+        #kampange h2 {
+            padding-top: 40px;
+        }
+
+        #kampange .col:nth-child(2) {
+            margin: 0px;
+            padding: 10px;
+            top: 30vh;
+
+        }
+
+        #smag .col:nth-child(1) {
             margin-left: 0px;
-            transition: .5s ease margin, .3s ease height .5s;
         }
+
+        #smag .col:nth-child(1) p {
+            color: black;
+        }
+
+        #smag p {
+            font-size: 1rem;
+
+        }
+    }
+
+    .infografikmain {
+        position: relative;
+        z-index: 10;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        font-size: 14px;
+        font-weight: 200;
+        padding-left: 30px;
+    }
+
+    .infografikcontainer {
+        max-width: 360px;
+        margin: 0 auto;
+
+    }
+
+    .infografikcontainer input {
+        margin-bottom: 40px;
+
+    }
+
+    .infografikoverskrift {
+        font-size: 22px;
+        font-weight: 800;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        text-align: left;
+    }
+
+    .infografikmain:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10000px;
+        width: 10000px;
+        height: 70%;
+        z-index: 10;
+    }
+
+    .infolabels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 4.29px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .infografikmain input {
+        background-color: white;
+    }
+
+    .infografikmain h2 {
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-family: 'Abril Fatface', cursive;
     }
 
 </style>
 
 <body>
-
     <div class="dropdown">
         <button class="dropbtn">TUBORG NUL
             <i class="fa fa-caret-down"></i>
             <div class="dropdown-content">
-                <a href="tuborg_nul.html#kampange">KAMPAGNE</a>
-                <a href="tuborg_nul.html#smag">SMAG</a>
-                <a href="tuborg_nul.html#interaktion">#STADIGØL</a>
+                <a href="#kampange">KAMPAGNE</a>
+                <a href="#smag">SMAG</a>
+                <a href="#interaktion">#STADIGØL</a>
             </div>
         </button>
     </div>
 
-    <section id="tuborgmain">
+    <section id="splash">
 
-        <div class="container">
 
-            <button class=tuborgbutton>
-                <a link href="tuborg_nul.html">TUBORG NUL›</a>
-            </button>
-            <p>- En helt ny øl fra Tuborg.</p>
 
+        <div class="sectionwrapper">
+
+            <div class="col">
+                <img src="2oel.png">
+            </div>
+
+            <div class="col">
+
+                <div class="top">
+
+
+                    <h1>TUBORG NUL</h1>
+                </div>
+                <div class="bottom">
+
+                    <div class="cirkel"></div>
+                    <div class="box"></div>
+                    <h2>En forfriskende ny øloplevelse.</h2>
+                    <p> Ingen alkohol, stadig en Tuborg. Den nye øl fra Tuborg, en frisk og lækker alkohol fri øl, til dig der tænker det er tid til at prøve noget nyt.<br>Præcis som ingen andre øl.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <section id="kampange">
+
+        <h1>TID TIL HYGGE?</h1>
+
+        <div class="sectionwrapper">
+
+            <div class="col">
+
+                <video controls>
+                    <source src="tuborgnulfilm.mp4" type="video/mp4"></video>
+
+            </div>
+
+            <div class="col">
+
+                <img src="sixpack.png" alt="sixpack">
+                <div class="textpack">
+                    <h2>Tid til en sixpack?</h2>
+                    <p>Med den nye Tuborg NUL, mener vi 0% alkohol. NUL er hverken en light- eller superlight øl. Det er en øl uden alkohol. Så om du skal køre hjem fra en familiesammenkomst, op og træne eller ud og hygge dig med vennerne, vil du altid kunne medbringe en Tuborg NUL.</p>
+                </div>
+            </div>
         </div>
     </section>
-    <script src=""></script>
+
+    <section id="social_media">
+
+        <div class="sectionwrapper">
+
+            <a href="https://www.facebook.com/TuborgDenmark/">
+
+                <p>
+                    FØLG TUBORG NUL PÅ FACEBOOK</p>
+            </a>
+
+            <a href="https://www.instagram.com/tuborg/">
+                <p> FØLG TUBORG NUL PÅ INSTAGRAM</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="smag">
+
+        <div class="sectionwrapper">
+
+            <div class="col">
+                <img src="TUBORGNULSTORT.png" alt="logostort">
+                <h1>INTET ALKOMETER?</h1>
+                <p>Selv om Tuborg NUL ikke indeholder noget alkohol, så er det altså stadig en øl. Du kan sagtens have den med, som erstatning til en almindelig øl, hvis du nu ikke lige føler for at vågne op med tømmermænd, eller bare vil nyde smagen af en anden øl. <br>Hvis du ikke tror på os, kan du prøve vores promille udregner her.</p>
+
+                <div class="udregner">
+                    <form><label for="oeldrukket">Antal Tuborg NUL drukket:</label>
+
+                        <input type="number" id="oeldrukket" name="oeldrukket" min="1" max="10000" placeholder="Indsæt et tal her"></form>
+                    <button id="submitknap">Udregn</button>
+                </div>
+
+                <div id="resultattekst" class="hide">
+                    <p>Din promille er 0.0%! Der er nemlig ingen alkohol i Tuborg NUL, så du kan køre bil selv efter en kasse.</p>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="infografikmain">
+                    <div class="infografikcontainer">
+                        <h2>Smagen</h2>
+                        <p>Tuborg NUL er en forfriskende pilsner med frugtige undertoner, som vi kender det fra en Grøn Tuborg. Tuborg NUL er stadig helt sin egen øl, uden alkohol …selvfølgelig.</p>
+
+                        <p class="infografikoverskrift">Fylde</p>
+                        <div class="infolabels">
+                            <span>Let</span>
+                            <span>Kraftig</span>
+                        </div>
+
+                        <input type="range" min="1" max="5" value="2" disabled />
+                        <p class="infografikoverskrift">Livlighed</p>
+                        <div class="infolabels">
+                            <span>Rolig</span>
+                            <span>Livlig</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="3" disabled />
+                        <p class="infografikoverskrift">Bitterhed</p>
+                        <div class="infolabels">
+                            <span>Lidt</span>
+                            <span>Meget</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="2" disabled />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="interaktion">
+
+        <div class="sectionwrappeer">
+
+        </div>
+
+
+
+    </section>
+
+
+    <footer>
+        <p>EN DEL AF TUBORG BRANDET</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
+
 
 </html>
